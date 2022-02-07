@@ -11,14 +11,19 @@
         android:theme="@style/Theme.Demo_IN">
         <activity
             android:name=".ui.splash.SplashActivity"
-            android:theme="@style/SplashScreenTheme"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashScreenTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".ui.panverify.PanVerifyActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

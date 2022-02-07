@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.panverify.PanVerifyActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".ui.panverify.PanVerifyActivity">
+
+            <TextView
+                android:id="@+id/tvHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_margin_right_left"
+                android:layout_marginTop="@dimen/dimen_margin_top_bottom"
+                android:text="@string/s"
+                android:textColor="@color/color_header_text"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvSubHeader"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_margin_top_bottom"
+                android:layout_marginEnd="@dimen/dimen_margin_right_left"
+                android:text="@string/first_step"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tvHeader"
+                app:layout_constraintTop_toBottomOf="@+id/tvHeader" />
+
+
+            <TextView
+                android:id="@+id/tvLabelPan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_margin_right_left"
+                android:text="@string/pan_number"
+                android:textAllCaps="true"
+                android:textColor="@color/color_label"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/tvSubHeader"
+                app:layout_constraintStart_toStartOf="@id/tvHeader"
+                app:layout_constraintTop_toBottomOf="@+id/tvSubHeader" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilPan"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/tvSubHeader"
+                app:layout_constraintStart_toStartOf="@id/tvSubHeader"
+                app:layout_constraintTop_toBottomOf="@+id/tvLabelPan">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtPan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:imeOptions="actionNext"
+                    android:padding="12dp"
+                    android:textSize="18sp"
+                    tools:text = "cwwww5215"
+                    android:singleLine="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/tvLabelBirthDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_margin_top_bottom"
+                android:text="@string/birth_date"
+                android:textAllCaps="true"
+                android:textColor="@color/color_label"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/tvSubHeader"
+                app:layout_constraintStart_toStartOf="@id/tvHeader"
+                app:layout_constraintTop_toBottomOf="@+id/tilPan" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.32" />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.55" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilDate"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/tvSubHeader"
+                app:layout_constraintEnd_toStartOf="@+id/guideline"
+                app:layout_constraintStart_toStartOf="@id/tvSubHeader"
+                app:layout_constraintTop_toBottomOf="@+id/tvLabelBirthDate">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:padding="12dp"
+                    android:textSize="18sp"
+                    android:maxLength="2"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilMonth"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toStartOf="@+id/guideline1"
+                app:layout_constraintStart_toEndOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/tvLabelBirthDate">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtMonth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:padding="12dp"
+                    android:textSize="18sp"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilYear"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/tvSubHeader"
+                app:layout_constraintStart_toEndOf="@+id/guideline1"
+                app:layout_constraintTop_toBottomOf="@+id/tvLabelBirthDate">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtYear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:imeOptions="actionDone"
+                    android:padding="12dp"
+                    android:textSize="18sp"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvLabelLearnMore"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
+                android:text="@string/learn_more"
+                android:textColor="@color/color_learn_more"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/tvSubHeader"
+                app:layout_constraintStart_toStartOf="@id/tvHeader"
+                app:layout_constraintTop_toBottomOf="@+id/tilYear" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</FrameLayout>

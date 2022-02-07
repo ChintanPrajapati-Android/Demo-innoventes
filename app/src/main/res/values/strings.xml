@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Demo_IN</string>
+    <string name="s">S.</string>
+    <string name="first_step">First of the few steps to set you up with Bank Account</string>
+    <string name="pan_number">Pan Number</string>
+    <string name="birth_date">Birthdate</string>
+
+    <string name="learn_more">Providing PAN &amp; Date of Birth helps us find and fetch your KYC from a central registryby the
+        Government of India. <font fgcolor='#6041B0'>Learn more</font></string>
 </resources>
