@@ -12,7 +12,4 @@ interface UserDataDao {
 
     @Insert()
     suspend fun insertUserDetail(userDataItem: UserDataItem)
-
-    @Query("SELECT * FROM  user_data where user_name = (:userName)")
-    suspend fun isUserNameExist(userName :String) : UserDataItem?
 }

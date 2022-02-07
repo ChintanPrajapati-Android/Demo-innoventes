@@ -72,12 +72,12 @@
                     android:id="@+id/edtPan"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:maxLines="1"
                     android:imeOptions="actionNext"
+                    android:maxLines="1"
                     android:padding="12dp"
+                    android:singleLine="true"
                     android:textSize="18sp"
-                    tools:text = "cwwww5215"
-                    android:singleLine="true" />
+                    tools:text="cwwww5215" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -129,11 +129,12 @@
                     android:gravity="center"
                     android:imeOptions="actionNext"
                     android:inputType="number"
-                    android:padding="12dp"
-                    android:textSize="18sp"
                     android:maxLength="2"
+                    android:hint="@string/dd"
                     android:maxLines="1"
-                    android:singleLine="true" />
+                    android:padding="12dp"
+                    android:singleLine="true"
+                    android:textSize="18sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -152,13 +153,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
                     android:gravity="center"
+                    android:hint="@string/mm"
                     android:imeOptions="actionNext"
                     android:inputType="number"
                     android:maxLength="2"
-                    android:padding="12dp"
-                    android:textSize="18sp"
                     android:maxLines="1"
-                    android:singleLine="true" />
+                    android:padding="12dp"
+                    android:singleLine="true"
+                    android:textSize="18sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -176,13 +178,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
+                    android:hint="@string/yyyy"
+                    android:imeOptions="actionDone"
                     android:inputType="number"
                     android:maxLength="4"
-                    android:imeOptions="actionDone"
-                    android:padding="12dp"
-                    android:textSize="18sp"
                     android:maxLines="1"
-                    android:singleLine="true" />
+                    android:padding="12dp"
+                    android:singleLine="true"
+                    android:textSize="18sp" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -197,6 +200,34 @@
                 app:layout_constraintEnd_toEndOf="@+id/tvSubHeader"
                 app:layout_constraintStart_toStartOf="@id/tvHeader"
                 app:layout_constraintTop_toBottomOf="@+id/tilYear" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnNext"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/next"
+                android:enabled="false"
+                android:alpha="0.5"
+                android:textColor="@color/white"
+                app:backgroundTint="@color/color_button"
+                app:layout_constraintEnd_toEndOf="@id/tvSubHeader"
+                app:layout_constraintStart_toStartOf="@id/tvHeader"
+                app:layout_constraintTop_toBottomOf="@+id/tvLabelLearnMore" />
+
+            <TextView
+                android:id="@+id/tvLabelNoPan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:gravity="center"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:text="@string/i_don_t_have_a_pan"
+                android:textColor="@color/color_button"
+                app:layout_constraintEnd_toEndOf="@+id/tvSubHeader"
+                app:layout_constraintStart_toStartOf="@id/tvHeader"
+                app:layout_constraintTop_toBottomOf="@+id/btnNext" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
